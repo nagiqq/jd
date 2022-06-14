@@ -1,76 +1,984 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>桔嘟旅行社</title>
- <!-- 網頁頁籤標題左側顯示的圖示ICON -->
- <link rel="icon" href="logoicon.ico" type="image/x-icon" />
- <!-- 書籤收藏夾顯示的圖示ICON -->
- <link rel="shortcut icon" href="logoicon.ico" type="image/x-icon" />
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>桔嘟旅行社</title>
+  <!-- 網頁頁籤標題左側顯示的圖示ICON -->
+  <link rel="icon" href="image/jd_logo.ico" type="image/x-icon" />
+  <!-- 書籤收藏夾顯示的圖示ICON -->
+  <link rel="shortcut icon" href="image/jd_logo.ico" type="image/x-icon" />
 
- <!-- Bootstrap v5.1.1 CSS 檔案的連結 -->
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-   integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <!-- Bootstrap v5.1.1 CSS 檔案的連結 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
- <!-- Bootstrap v5.1.1 JS 檔案的載入(包含popper) -->
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-   integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
- </script>
+  <!-- Bootstrap v5.1.1 JS 檔案的載入(包含popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+  </script>
 
- <!-- jQuery 函式庫檔案的載入 -->
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery 函式庫檔案的載入 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
- <!-- 將需要設計的 CSS 樣式撰寫在 layout.css檔案 -->
- <link rel="stylesheet" href="layout.css">
+  <!-- 將需要設計的 CSS 樣式撰寫在 layout.css檔案 -->
+  <link rel="stylesheet" href="css/layout.css">
 
- 
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
 
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
+
 <body>
- <!-- nav ================================================================================= -->
-<nav>
+  <!-- nav ================================================================================= -->
+  <header class="justify-content-center">
+    <nav class="navbar navbar-expand-md ml-auto">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- 這是按鈕上呈現的icon圖案 -->
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-</nav>
-<!-- sec1 ================================================================================= -->
-<section id="sec1">
-  <h1>index</h1>
-</section>
+      <!-- navbar-collapse表示這個框架區塊是可收展開的, 注意:id名稱必須跟button中的data-target一樣 -->
+      <!-- 左右二組選單要分散到二邊時, 方法(1)父層加justify-content-between的class名稱  -->
+      <!-- 左右二組選單要分散到二邊時, 方法(2)子層左側選單組加mr-auto的class名稱  -->
+      <!-- 左右二組選單要分散到二邊時, 方法(3)子層右側選單組加ml-auto的class名稱  -->
+      <div class="collapse_rig" id="collapse_rig ml-auto">
+        <!-- 這是一組靠左側的選單 -->
+        <!-- 加上 mr-auto,表示 margin-right:auto; 負責將剩下多出來的margin指定到左側選單組的右邊 ********** -->
+        <ul class="navbar-nav">
+          <!-- active在視覺上設計底色不同,表示目前在這個位置,如果不需要則刪除  -->
+          <li class="nav-item">
+            <a class="nav-link" href="#sec2">關於桔嘟</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sec3">行程介紹</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sec4">貼心叮嚀</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-<!-- sec2 ================================================================================= -->
-<section id="sec2">
-  <h1>about us</h1>
-</section>
-<!-- sec3 ================================================================================= -->
-<section id="sec3">
-  <h1>detail</h1>
-</section>
+    <div class="logo">
+      <a href="#sec1">
+        <img src="./image/jd_loge01.png">
+      </a>
+    </div>
 
-<!-- sec4 ================================================================================= -->
-<section id="sec4">
-  <h1>inifo</h1>
-</section>
+    <nav class="navbars navbar-expand-md">
+      <div class="collapse_lef" id="collapse_lef">
+        <!-- 這是一組靠右側的選單 ********** -->
+        <ul class="navbar-nav ml-auto">
+          <!-- active在視覺上設計底色不同,表示目前在這個位置,如果不需要則刪除  -->
+          <li class="nav-item">
+            <a class="nav-link" href="#sec5">服務據點</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sec6">合作商家</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sec7">聯絡我們</a>
+          </li>
+        </ul>
+      </div>
+      
+    <a class="navmenu">
+      <i class="fa-solid fa-bars close"></i>
+    </a>
+    <div class="navmenu_show ">
+      <ul>
+          <li class="navMenu_item">
+            <a class="nav-link" href="#sec2">關於桔嘟</a>
+          </li>
+          <li class="navMenu_item">
+            <a class="nav-link" href="#sec3">行程介紹</a>
+          </li>
+          <li class="navMenu_item">
+            <a class="nav-link" href="#sec4">貼心叮嚀</a>
+          </li>
+        <li class="navMenu_item">
+          <a class="nav-link" href="#sec5">服務據點</a>
+        </li>
+        <li class="navMenu_item">
+          <a class="nav-link" href="#sec6">合作商家</a>
+        </li>
+        <li class="navMenu_item">
+          <a class="nav-link" href="#sec7">聯絡我們</a>
+        </li>
+      </ul>
+    </div>
+    </nav>
+  </header>
 
-<!-- sec5 ================================================================================= -->
-<section id="sec5">
-  <h1>location</h1>
-</section>
+  <!-- sec1 ================================================================================= -->
+  <section id="sec1">
+    <div class="indexImg">
+      <video autoplay loop muted>
+        <source src="./image/indexvideo.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="indexDes  d-flex  flex-column justify-content-center pt-xxl-5  " data-aos="zoom-in-up">
+      <h3 class="lh-lg fs-5"><span class="me-3">電話 | 0912-345678</span> <span class="me-3">Line ID | 0912345678 </span>
+        <span>E-mail | justdotravel@gmail.com</span></h3>
+      <br>
+      <h3 class="fs-5">地址 | 新北市永和區中正路1段</h3>
+      <br>
+      <hr style="width:50%; margin: 0 auto;">
+      <img src="./image/firstlogo04.png" alt="">
 
-<!-- sec6 ================================================================================= -->
-<section id="sec6">
-  <h1>sce</h1>
-</section>
+    </div>
+  </section>
 
-<!-- sec7 ================================================================================= -->
-<section id="sec7">
-  <h1>聯絡表單</h1>
-</section>
-<!-- footer ================================================================================= -->
-<footer>
+  <!-- sec2 ================================================================================= -->
+  <section id="sec2">
+    <img class="title col-9" src="./image/title01.png" alt="" data-aos="fade-up">
+    <div class="about row ">
+      <img class=" about_img col-12 col-md-6 col-xxl-6 p-5 ms-xxl-5" src="./image/about.png"  data-aos="fade-right">
+      <div class="aboutDes col-12 col-md-6 col-xxl-5 ps-5 mt-5"  data-aos="fade-right">
+        <h4 class="mb-5 fs-1">桔嘟 讓你的夢想Just Do It！</h4>
+        <img class="hr_bg" src="./image/hr_bg.png" alt="">
+        <p class="p-5 fs-4">深入挖掘在地旅遊體驗行程，提供易於使用的預訂平台，我們把安排旅程變得更簡單、更即時，也讓旅人玩得更自在、更盡興、更安全。
+          我們深信自由行是最能貼近在地的旅遊方式，每一趟旅程，都是一場精彩的饗宴。並希望每個愛旅行的你，都能和我們一樣，享受自由行的美好。</p>
+      </div>
+    </div>
+    <div class="slogan1"  data-aos="fade-up">
+      <img class="col-4" src="./image/slogan02.png" alt="">
+      <hr style="width:60vw; float:right; height:3px; color:#5a63ae; margin-right:10rem;">
+    </div>
+    <div class="slogan2 float-end"  data-aos="fade-up">
+      <img src="./image/slogan1.png" alt="">
+    </div>
+    <img class="gallery" src="./image/gallery.png" alt=""  data-aos="fade-up">
+  </section>
 
-</footer>
 
+  <!-- sec3 ================================================================================= -->
+  <section id="sec3">
+    <img class="title col-9" src="./image/title02.png" alt=""  data-aos="fade-up">
+    <div class="detail pb-5"  data-aos="fade-up">
+      <div class="detail_nav" id="del_nav">
+        <ul class="nav justify-content-xxl-evenly justify-content-center py-xxl-2">
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="#del1">
+              日本 Japan
+              <hr>
+              富士山一日遊
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="#del2">
+              韓國 Korea
+              <hr>
+              首爾・京畿道一日遊
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="#del3">
+              泰國 Thailand
+              <hr>
+              北碧府愛侶灣瀑布
+              <br>
+              & 死亡鐵路一日遊
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="#del5">
+              峇厘島 Bali
+              <hr>
+              藍夢島紅樹林
+              <br> & 浮潛一日遊
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4 me-2" href="#del4">
+              新加坡 Singapore
+              <hr>
+              環球影城一日套票
+              <br>& 杜莎夫人蠟像館門票
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+
+      <div id="del2" class="japan p-3" data-aos="fade-up">
+        <div class="card_bg row row-cols-1 row-cols-md-2 g-4  mx-5 ">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title py-xxl-3 px-xxl-3 fs-4">| 日本 Japan | 東京富士山一日遊
+                    <br> | 河口湖・冰穴風穴・忍野八海｜
+                    <a href="" class=" modal_a " data-bs-toggle="modal" data-bs-target="#japan-modal"><img
+                        src="./image/modal_a03.png" alt=""></a>
+                </h5>
+                <p class="card-text py-xxl1">行程參考網站：https://www.kkday.com/zh-tw/ kkday</p>
+                <img src="./image/japan01.png" class="card-img-bottom" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <img src="./image/japan02.png" class="card-img-bottom mb-4 px-1" alt="...">
+                <div class="card_top ">
+                  <img src="./image/japan03.png" class="card-img-top  " alt="...">
+                  <img src="./image/japan04.png" class="card-img-top  " alt="...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="goback">
+        <a href="#del_nav"><img src="./image/goback.png" alt="" style="width:100%;"> </a>
+        <hr>
+      </div>
+
+
+      <div id="del2" class="korea p-3" data-aos="fade-up">
+        <div class="card_bg row row-cols-1 row-cols-md-2 g-4 mx-5 ">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title py-xxl-3 px-xxl-3 fs-4">| 韓國 Korea | 首爾・京畿道一日遊
+                    <br> | 韓國民俗村 & 夜遊漢江音樂遊覽船 |
+                    <a href="" class=" modal_a" data-bs-toggle="modal" data-bs-target="#korea-modal"><img
+                        src="./image/modal_a03.png" alt=""></a>
+                </h5>
+                <p class="card-text  py-xxl1">行程參考網站：https://www.kkday.com/zh-tw/ kkday</p>
+                <img src="./image/korea01.png" class="card-img-bottom" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <img src="./image/korea02.png" class="card-img-bottom mb-4 px-1" alt="...">
+                <div class="card_top">
+                  <img src="./image/korea03.png" class="card-img-top " alt="...">
+                  <img src="./image/korea04.png" class="card-img-top " alt="...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="goback">
+        <a href="#del_nav"><img src="./image/goback.png" alt="" style="width:100%;"> </a>
+        <hr>
+      </div>
+
+      <div id="del2" class="Thailand p-3 " data-aos="fade-up">
+        <div class="card_bg row row-cols-1 row-cols-md-2 g-4  mx-5 ">
+          <div class="col">
+            <div class="card ">
+              <div class="card-body">
+                <h5 class="card-title py-xxl-3 px-xxl-3 fs-4">| 泰國 Thailand
+                    <br>北碧府愛侶灣瀑布 & 死亡鐵路一日遊 |
+                    <a href="" class=" modal_a" data-bs-toggle="modal" data-bs-target="#thailand-modal"><img
+                        src="./image/modal_a03.png" alt=""></a>
+                </h5>
+                <p class="card-text py-xxl1">行程參考網站：https://hk.trip.com/things-to-do/detail/39937320/ Trip.com</p>
+                <img src="./image/tai01.png" class="card-img-bottom" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <img src="./image/tai02.png" class="card-img-bottom mb-4 px-1" alt="...">
+                <div class="card_top">
+                  <img src="./image/tai03.png" class="card-img-top" alt="...">
+                  <img src="./image/tai04.png" class="card-img-top" alt="...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="goback">
+        <a href="#del_nav"><img src="./image/goback.png" alt="" style="width:100%;"> </a>
+        <hr>
+      </div>
+
+      <div id="del2" class="sin p-3" data-aos="fade-up">
+        <div class="card_bg row row-cols-1 row-cols-md-2 g-4  mx-5 ">
+          <div class="col">
+            <div class="card ">
+              <div class="card-body">
+                <h5 class="card-title py-xxl-3 px-xxl-3 fs-4">| 新加坡 Singapore
+                    <br>環球影城一日套票& 杜莎夫人蠟像館門票 |
+                    <a href="" class=" modal_a" data-bs-toggle="modal" data-bs-target="#sin-modal"><img
+                        src="./image/modal_a03.png" alt=""></a>
+                </h5>
+                <p class="card-text py-xxl1">行程參考網站：https://hk.trip.com/things-to-do/detail/39937320/ Trip.com</p>
+                <img src="./image/sin01.png" class="card-img-bottom" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <img src="./image/sin02.png" class="card-img-bottom mb-4 px-1" alt="...">
+                <div class="card_top">
+                  <img src="./image/sin03.png" class="card-img-top" alt="...">
+                  <img src="./image/sin04.png" class="card-img-top" alt="...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="goback">
+        <a href="#del_nav"><img src="./image/goback.png" alt="" style="width:100%;"> </a>
+        <hr>
+      </div>
+
+      <div id="del2" class="bali p-3" data-aos="fade-up">
+        <div class="card_bg row row-cols-1 row-cols-md-2 g-4 mx-5 ">
+          <div class="col">
+            <div class="card ">
+              <div class="card-body">
+                <h5 class="card-title py-xxl-3 px-xxl-3 fs-4">|峇厘島 Bali
+                  <a href="" class=" modal_a" data-bs-toggle="modal" data-bs-target="#bali-modal"><img
+                      src="./image/modal_a03.png" alt=""></a>
+                  <br>
+                  藍夢島紅樹林 & 浮潛一日遊 |
+                </h5>
+                <p class="card-text py-xxl1">行程參考網站：https://hk.trip.com/things-to-do/detail/39937320/ Trip.com</p>
+                
+                <img src="./image/ba01.png" class="card-img-bottom" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <img src="./image/ba02.png" class="card-img-bottom mb-4 px-1" alt="...">
+                <div class="card_top">
+                  <img src="./image/ba03.png" class="card-img-top" alt="...">
+                  <img src="./image/ba04.png" class="card-img-top" alt="...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="goback">
+        <a href="#del_nav"><img src="./image/goback.png" alt="" style="width:100%;"> </a>
+        <hr>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modal ================================================================================= -->
+  <!-- Modal -->
+  <div class="modal fade" id="japan-modal" tabindex="-1" aria-labelledby="japan-modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fs-1" id="japan-modalLabel">東京富士山一日遊 | 河口湖・冰穴風穴・忍野八海｜</h5>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        </div>
+        <hr style="width:80%; margin:0 auto; margin-bottom:2rem; color:#2F8F9D;">
+        <div class="modal-body row d-flex fs-2">
+          <div class=" div01 col-12 col-xxl-6">
+            <img src="./image/modal_title01.png" alt="">
+            
+            <p>🔺行程時間 11 小時 </p>
+            <p>🔺日本語/中文 導覽</p>
+            <p>🔺8天前可免費取消</p>
+            <p>🔺搭乘旅遊專車，暢遊富士山熱門景點</p>
+            <p>🔺漫步欣賞湖光山色，品嚐道地鄉土料理</p>
+            <p>🔺少人數出團，8人成行（依人數派車，15人以 </p>
+            <p> 下不另派領隊，由司機兼領隊全程服務）</p>
+            <p>🔺8人成行可包團！專屬司領人員服務，出團日 </p>
+            <p> 期可談，可至指定地點接送（限單一地點）</p>
+            <p>🔺讓您旅行更自由，快揪親朋好友出遊去！</p>
+          </div>
+
+          <div class="div02 col-12 col-xxl-6">
+            <img src="./image/modal_title02.png" alt="">
+            
+            <p>費用包括：</p>
+            <br>
+            <p>✔小費</p>
+            <p>✔消費稅</p>
+            <p>✔富岳風穴・鳴沢氷穴入場門票</p>
+            <p>✔河口湖名物午餐（寶刀鍋）</p>
+            <p>✔往返巴士及過路費</p>
+            <p>✔領隊費用（中・日對照）</p>
+            <br></br>
+            <p>費用不包括：</p>
+            <p>❌個人消費</p>
+            <p>❌以上未提及消費</p>
+
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="korea-modal" tabindex="-1" aria-labelledby="korea-modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fs-1" id="korea-modalLabel">首爾・京畿道一日遊｜韓國民俗村 & 夜遊漢江音樂遊覽船
+          </h5>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        </div>
+        <hr style="width:80%; margin:0 auto; margin-bottom:2rem; color:#2F8F9D;">
+        <div class="modal-body row d-flex fs-2">
+          <div class=" div01 col-12 col-xxl-6">
+            <img src="./image/modal_title01.png" alt="">
+            
+            <p>🔺朝鮮時代的演員出現在民俗村各處，將遊客帶入朝鮮時代 </p>
+            <p>🔺中/英文專業導遊全程貼心服務</p>
+            <p>🔺漢江遊覽船</p>
+            <p>兩岸一字排開的樓房燈火，首爾最高的三座摩天大樓，63 廣場、南山首爾塔和樂天世界塔都可以看到</p>
+            <p>🔺龍仁韓國民俗村</p>
+            <p>以寬廣的朝鮮時代為背景向遊客展示了夢幻般的世界及人物間津津有味的關係，使遊客們感到彷彿置身朝鮮時代。</p>
+          </div>
+
+          <div class="div02 col-12 col-xxl-6">
+            <img src="./image/modal_title02.png" alt="">
+            
+            <p>費用包括： </p>
+            <p>✔中 / 英文導遊</p>
+            <p>✔往返首爾交通費用</p>
+            <p>✔車輛費用</p>
+            <p>✔景點入場費用</p>
+            <p>✔小費</p>
+            <p>✔餐費</p>
+            <p>✔保險</p>
+            <br>
+            <p>費用不包括：</p>
+            <p>❌以上未提及消費</p>
+
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="thailand-modal" tabindex="-1" aria-labelledby="thailand-modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fs-1" id="thailand-modalLabel">| 泰國・北碧府愛侶灣瀑布&死亡鐵路一日遊 |
+          </h5>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        </div>
+        <hr style="width:80%; margin:0 auto; margin-bottom:2rem; color:#2F8F9D;">
+        <div class="modal-body row d-flex fs-2">
+          <div class=" div01 col-12 col-xxl-6">
+            <img src="./image/modal_title01.png" alt="">
+            
+            <p>🔺時間：：07:00 - 17:00</p>
+            <p>🔺接機地點：酒店接機</p>
+            <p>🔺乘船前往藍夢島（30 分鐘）</p>
+            <p>🔺在 3 個不同的地點浮潛</p>
+            <p>（紅樹林點、GT 點、牆點）</p>
+            <p>🔺印尼午餐</p>
+            <p>🔺在 Arthamas 海灘俱樂部的空閒時間2小時</p>
+            <p>🔺乘船返回沙努爾</p>
+            <p>🔺回到酒店，結束行程</p>
+
+          </div>
+          <div class="div02 col-12 col-xxl-6">
+            <img src="./image/modal_title02.png" alt="">
+            
+            <p>費用不包括： </p>
+            <p>❌此產品未包含小費費用，如果您對服務人員</p>
+            <p>的服務感到滿意，建議酌情給予</p>
+
+
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="sin-modal" tabindex="-1" aria-labelledby="sin-modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h5 class="modal-title fs-1" id="sin-modalLabel">| 新加坡 環球影城一日套票 & 杜莎夫人蠟像館門票 |
+          </h5>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        </div>
+        <hr style="width:80%; margin:0 auto; margin-bottom:2rem; color:#2F8F9D;">
+        <div class="modal-body  row fs-2">
+          <div class=" div01 col-12 col-xxl-6">
+            <img src="./image/modal_title01.png" alt="">
+
+            <p>環球影城：</p>
+            <p>🔺驚險刺激的遊樂設施，俏皮可愛的環球巨星</p>
+            <p>🔺新加坡必去主題樂園</p>
+            <p>🔺一齊投入 Minions、變形金剛、侏儸紀公園</p>
+            <p> 的世界</p>
+            <p>🔺參觀電影片場，暢遊電影夢工廠</p>
+            <br>
+            <p>杜莎夫人蠟像館：：</p>
+            <p>🔺探索杜莎夫人蠟像館，與全球政界、演藝</p>
+            <p> 界、體壇名人合影留念</p>
+            <p>🔺進入4D漫威電影體驗館，與美國隊長、鋼 </p>
+            <p> 鐵人等復仇者聯盟超級英雄近距離接觸</p>
+
+          </div>
+
+          <div class="div02 col-12 col-xxl-6">
+            <img src="./image/modal_title02.png" alt="">
+
+            <p>5合1套票+Digi Pass套餐包含： </p>
+            <p>✔新加坡杜莎夫人蠟像館門票+\</p>
+            <p>✔4D漫威電影體驗館</p>
+            <p>✔電影巨星體驗</p>
+            <p>✔Spirit of Singapore 室內游河體驗</p>
+            <p>✔新加坡萬象館</p>
+            <p>✔1張Digi Photo Pass票（價值SGD 20）</p>
+            <p>✔景點門票->藍夢島、惡魔之淚及夢幻海灘</p>
+            <br>
+            <p>費用不包括：</p>
+            <p>❌個人消費及以上未提及的任何費用</p>
+
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="bali-modal" tabindex="-1" aria-labelledby="bali-modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fs-1" id="bali-modalLabel">| 峇厘島・藍夢島紅樹林 & 浮潛一日遊 |
+          </h5>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        </div>
+        <hr style="width:80%; margin:0 auto; margin-bottom:2rem; color:#2F8F9D;">
+        <div class="modal-body row d-flex fs-2">
+          <div class=" div01 col-12 col-xxl-6   ">
+            <img src="./image/modal_title01.png" alt="">
+
+            <p>浮潛之旅： </p>
+            <p>🔺時間：07:00 - 17:00</p>
+            <p>🔺接機地點：酒店接機</p>
+            <p>🔺乘船前往藍夢島（30 分鐘）</p>
+            <p>🔺在 3 個不同的地點浮潛</p>
+            <p>（紅樹林點、GT 點、牆點）</p>
+            <p>🔺印尼午餐</p>
+            <p>🔺在 Arthamas 海灘俱樂部的空閒時間2小時</p>
+            <p>🔺乘船返回沙努爾</p>
+            <p>🔺回到酒店，結束行程 </p>
+
+
+          </div>
+
+          <div class="div02 col-12 col-xxl-6  ">
+            <img src="./image/modal_title02.png" alt="">
+
+
+            <p>費用不包括： </p>
+            <p>❌此產品未包含小費費用，如果您對服務人員</p>
+            <p>的服務感到滿意，建議酌情給予</p>
+
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- sec4 ================================================================================= -->
+  <!-- sec4 ================================================================================= -->
+  <section id="sec4" data-aos="fade-up">
+    <img class="title col-9" src="./image/title03.png" alt="">
+    <div class="secFour">
+      <ul class="nav nav-pills mb-3 note" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+          type="button" role="tab" aria-controls="pills-home" aria-selected="true"><img class="nt" src="image/info1.png" alt=""><img src="image/info1_h.png" class="nt1" alt=""></button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+          type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><img class="nt" src="image/info2.png" alt=""><img src="image/info2_h.png" class="nt1" alt=""></button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+          type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><img class="nt" src="image/info3.png" alt=""><img src="image/info3_h.png" class="nt1" alt=""></button>
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="desc1">
+          <ul>
+            <li> 📌 如有天災等突發狀況，一切以園區現場公告為主，敬請見諒。</li>
+            <li> 📌 表演會隨季節天氣影響有所變動，遇不可抗力等情況，表演節目有暫停，變更或取消之可能。</li>
+            <li> 📌 遊樂設施由於天後狀況或維修保養無法運作，將於大門口前告示遊客，敬請見諒。</li>
+            <li> 📌 馬車、迷你馬騎乘及遊樂設施由於天氣、天災或停電以及其他緣故而臨時取消，恕不另行通知。</li>
+            <li> 📌 本憑證不得與其他優惠合併使用，且恕無法兌換現金。</li>
+            <li> 📌 憑本憑證至售票亭兌換Just Do專屬活動券，其票券須於當日入園，逾期失效。未核銷兌換前可免費取消。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <div class="desc1">
+          <ul>
+            <li> 🐧 使用時間為當地時間。</li>
+            <li> 🐧 預訂成功后您會收到 Trip.com 的確認郵件。</li>
+            <li> 🐧 行程確認單將在24小時內發至您的郵箱。</li>
+            <li> 🐧 服務人員最晚會于出行前1日17:00（當地時間）前以電話或短信與您確認行程請注意查收若超時未聯繫，請聯繫客服。</li>
+            <li> 🐧 出行當日請憑電子確認單在約定時間前（建議提前10分鐘）前往約定地點集合。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+        <div class="desc1">
+          <h1>免費取消！</h1>
+          <h2>
+            注意：由於站內商品來自全球各地，訂單取消時間將依該供應商所在時區判定。供應商需 2-5 個工作天進行取消流程，依照您購買的商品取消政策收取手續費，並於取消流程完成後14 個工作天內退款。
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  
+  <!-- sec5 ================================================================================= -->
+  <section id="sec5" data-aos="fade-up">
+    <img class="title col-9" src="./image/title04.png" alt="" >
+    <div class="secMap" >
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.1368426469758!2d121.51164211495768!3d24.99546568399037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468027551455553%3A0x7c1838904d447cb!2zMjM05paw5YyX5biC5rC45ZKM5Y2A5Lit5q2j6LevMeiZnw!5e0!3m2!1szh-TW!2stw!4v1654568094464!5m2!1szh-TW!2stw"
+        width="1496" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" ></iframe>
+    </div>
+  </section>
+
+  <!-- sec6 ================================================================================= -->
+  <section id="sec6" data-aos="fade-up">
+    <img class="title col-9" src="./image/title05.png" alt="">
+    <!-- <div class="secSix">
+      <img src="image/title05.png">
+    </div> -->
+    <div class="sexSec" id="sexSec">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3">
+            <li>
+              <a href="https://www.tigerairtw.com/zh-tw/"><img src="image/logo001.png" >
+                <h1>台灣虎航網站</h1>
+                <hr class="style-one" />
+                <p>
+                  不需比價最優惠機票在台灣虎航，日本玩透透、北中南齊飛新加坡最便利，韓國、峇厘島、泰國說走就走！
+                </p>
+                <hr class="style-one" />
+              </a>
+            </li>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-3">
+            <li>
+              <a href="https://www.tokyodisneyresort.jp/tc/index.html"><img src="image/logo002.png" >
+                <h1>東京迪士尼網站</h1>
+                <hr class="style-one" />
+                <p>
+                  東京迪士尼樂園門票保證入園免排隊買票！透過桔嘟預訂，帶你玩遍東京迪士尼樂園，與心愛的角色一起度過 ...
+                </p>
+                <hr class="style-one" />
+              </a>
+            </li>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-3">
+            <li>
+              <a href="https://tc.trip.com/"><img src="image/logo004.png">
+                <h1>trip.com</h1>
+                <hr class="style-one" />
+                <p>
+                  120萬間以上的飯店，價格殺很大。多點進出機票，限時優惠！可信賴的旅行專家，現在就找桔嘟！
+                </p>
+                <hr class="style-one" />
+              </a>
+            </li>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-3">
+            <li>
+              <a href="https://www.liontravel.com/category/zh-tw/index"><img src="image/logo003.png">
+                <!-- <img src="image/logo004.png" data-img="sec3p1_4b.jpg" alt=""> -->
+                <h1>雄獅旅遊網站</h1>
+                <hr class="style-one" />
+                <p>
+                  從想放假的那一刻開始，找桔嘟不用再煩惱旅行大小事！ 旅遊、自由行...你想的到的玩法，我們都有~
+                </p>
+                <hr class="style-one" />
+              </a>
+            </li>
+          </div>
+
+        </div>
+      </div>
+  </section>
+
+  <!-- sec7 ================================================================================= -->
+  <section id="sec7" data-aos="fade-up">
+    <!-- <div class="secLogo">
+    <img src="image/JD01.png">
+    </div> -->
+    <div class="secDes">
+      <img src="image/title06.png ">
+    </div>
+    <form class="bg-light"
+      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfxFum3U-0hPhbIkVUUE_-viy1OYfTVxD2vEGEgLGduzHKspQ/formResponse"
+      target="_blank" method="POST">
+      <p class="text-center"><small><span class="reqword">*</span> 表示欄位必填</small></p>
+      <!-- 第1列 ================================== -->
+      <div class="row mb-3 align-items-center">
+        <!-- 左側欄位文字 -->
+        <div class="col-12 col-sm-4 col-md-3 d-flex justify-content-between justify-content-md-end align-items-center">
+          <span><span class="reqword">*</span>姓名：</span>
+          <span class="faword"><i class="bi bi-person-fill"></i></span>
+        </div>
+
+        <!-- 右側欄位區 -->
+        <div class="col-12 col-sm-7 col-md-8">
+          <!-- 查Google：文字欄位的name在上方(1) -->
+          <input type="text" name="entry.1895128983" class="form-control" required
+            placeholder="請填寫聯絡人真實姓名, 方便與您聯絡......">
+        </div>
+      </div>
+
+      <!-- 第2列 ================================== -->
+      <div class="row mb-3 align-items-center">
+        <div class="col-12 col-sm-4 col-md-3 d-flex justify-content-between justify-content-md-end align-items-center">
+          <span><span class="reqword">*</span>稱謂：</span>
+          <span class="faword"><i class="bi bi-gender-ambiguous"></i></span>
+        </div>
+
+        <div class="col-12 col-sm-7 col-md-8">
+          <!-- 查Google：單選欄位的name數字後方的字不需要 -->
+          <label><input type="radio" name="entry.1701086200" value="先生" class="form-check-input"> 先生
+            &nbsp;&nbsp;</label>
+          <label><input type="radio" name="entry.1701086200" value="小姐" class="form-check-input"> 小姐 </label>
+        </div>
+      </div>
+
+      <!-- 第3列 ================================== -->
+      <div class="row mb-3 align-items-center">
+        <div class="col-12 col-sm-4 col-md-3 d-flex justify-content-between justify-content-md-end align-items-center">
+          <span><span class="reqword">*</span>手機：</span>
+          <span class="faword"><i class="bi bi-phone-vibrate"></i></span>
+        </div>
+
+        <div class="col-12 col-sm-7 col-md-8">
+          <!-- 查Google：文字欄位的name在上方(2) -->
+          <input type="number" name="entry.426057982" class="form-control" required placeholder="請填寫與您聯絡的手機.......">
+        </div>
+      </div>
+      <!-- 第4列 ================================== -->
+      <div class="row mb-3 align-items-center">
+        <div class="col-12 col-sm-4 col-md-3 d-flex justify-content-between justify-content-md-end align-items-center">
+          <span><span class="reqword">*</span>電子信箱：</span>
+          <span class="faword"><i class="bi bi-envelope"></i></span>
+        </div>
+
+        <!-- 右側欄位區 -->
+        <div class="col-12 col-sm-7 col-md-8">
+          <!-- 查Google：文字欄位的name在上方(1) -->
+          <input type="text" name="entry.768472290" class="form-control" required placeholder="請填寫與您聯絡的電子郵件.......">
+        </div>
+      </div>
+
+      <!-- 第5列 ================================== -->
+      <div class="row mb-3 align-items-center">
+        <div class="col-12 col-sm-4 col-md-3 d-flex justify-content-between justify-content-md-end align-items-center">
+          <span><span class="reqword">*</span>選擇行程：</span>
+          <span class="faword"><i class="bi bi-send"></i></span>
+        </div>
+
+        <div class="col-12 col-sm-7 col-md-8">
+
+          <!-- 查Google：下拉選單欄位的name在上方(4) 順序依新增順序 -->
+          <select name="entry.1914545430" class="form-select" aria-label="Default select example">
+            <option selected disabled>選擇想去的行程...</option>
+            <option value="東京富士山一日遊">東京富士山一日遊</option>
+            <option value="首爾・京畿道一日遊">首爾・京畿道一日遊</option>
+            <option value="泰國・北碧府愛侶灣瀑布&死亡鐵路一日遊">泰國・北碧府愛侶灣瀑布&死亡鐵路一日遊</option>
+            <option value="新加坡 環球影城一日套票 & 杜莎夫人蠟像館門票">新加坡 環球影城一日套票 & 杜莎夫人蠟像館門票</option>
+            <option value="峇厘島・藍夢島紅樹林 & 浮潛一日遊">峇厘島・藍夢島紅樹林 & 浮潛一日遊</option>
+          </select>
+
+        </div>
+      </div>
+
+      <!-- 第6列 ================================== -->
+      <div class="row mb-3 align-items-center">
+        <div class="col-12 col-sm-4 col-md-3 d-flex justify-content-between justify-content-md-end align-items-center">
+          <span><span class="reqword">*</span>需求服務：</span>
+          <span class="faword"><i class="bi bi-check2-square"></i></span>
+        </div>
+
+        <div class="col-12 col-sm-7 col-md-8">
+          <!-- 查Google：複選欄位的name數字後方的字不需要, 同一題選項name名稱相同 -->
+          <label><input type="checkbox" name="entry.908828965" value="預約行程" class="form-check-input"> 預約行程
+            &nbsp;</label>
+          <label><input type="checkbox" name="entry.908828965" value="詳細介紹" class="form-check-input"> 詳細介紹
+            &nbsp;</label>
+          <label><input type="checkbox" name="entry.908828965" value="意見詢問" class="form-check-input"> 意見詢問
+            &nbsp;</label>
+          <label><input type="checkbox" name="entry.1665617217" value="親自來訪" class="form-check-input"> 親自來訪
+            &nbsp;</label>
+        </div>
+      </div>
+
+      <!-- 第7列 ================================== -->
+      <div class="row mb-3 align-items-start">
+        <div class="col-12 col-sm-4 col-md-3 d-flex justify-content-between justify-content-md-end align-items-center">
+          <span><span class="reqword">*</span>留言內容：</span>
+          <span class="faword"><i class="bi bi-chat-dots"></i></span>
+        </div>
+
+        <div class="col-12 col-sm-7 col-md-8">
+          <!-- 查Google：文字欄位的name在上方(3) 順序依新增順序 -->
+          <textarea name="entry.690062953" rows="6" class="form-control" required></textarea>
+        </div>
+      </div>
+
+      <!-- 第8列 ================================== -->
+      <div class="row mb-3 align-items-start">
+        <div class="col-12 col-sm-4 col-md-3 d-flex justify-content-between justify-content-md-end align-items-center">
+          &nbsp;</div>
+
+        <div class="col-12 col-sm-7 col-md-8 text-end">
+          <input type="submit" class="btn btn-outline-secondary" value="確定送出">
+        </div>
+      </div>
+
+    </form>
+  </section>
+      
+      
+  <!-- footer ================================================================================= -->
+  <hr style="border: 0; border-top: 3px double #d0d0d5; width:80vw; margin: 0 auto; margin-top: 10vh;">
+
+  <div class="fn d-flex justify-content-center py-5">
+    <img src="./image/fbtn1.png" alt="" class="px-3">
+    <img src="./image/fbtn2.png" alt="" class="px-3">
+    <img src="./image/fbtn3.png" alt="" class="px-3">
+  </div>
+  <footer>
+<div class="foot">
+  <div class="d-flex justify-content-center py-2">
+    <img src="./image/tn2.png" alt="">
+    <img src="./image/tn1.png" alt="">
+    <img src="./image/tn3.png" alt="">
+  </div>
+<p>--作品網站，非實際經營--</p>
+<p>Just Do It 桔嘟 | 如有侵權請告知，會即刻進行撤站處理 | 劉亭妤 ‧ 蘇珺心 協作 </p>
+</div>
+  </footer>
+  <script>
+    // 導覽列 =====================================================================================
+    var isClick = false;
+    $('nav-item a').click(function () {
+      isClick = true;
+      //先改變按鈕的樣子
+      $('nav-item a').removeClass('active');
+      $(this).addClass('active');
+      //再讓整頁滑動
+      var targetID = $(this).attr('href'); //取得目的位置
+      var targetTop = $(targetID).position().top; //指定目的位置, 取得到父層的距離
+      $('html').animate({
+        scrollTop: targetTop
+      }, 500, 'easeInOutCirc', function () {
+        isClick = false; //callback緊接著做:click結束以後馬上變成"不是click"的狀態
+      });
+    });
+    var secNo;
+    //當視窗有捲動時  => ...... => 讓對應的按鈕呈現.active
+    $(window).scroll(function () {
+      //假如isClick是false時才需要捲動的檢查
+      if (!isClick) {
+        //檢查每一個section的位置是否小於捲出去的距離
+        //each()表示一個一個逐項執行的迴圈, function(引數)中的i表示第?圈的索引編號, obj表示這一圈的物件
+        $('section').each(
+          function (i, obj) {
+            //假如這一圈的主角物件上方到父層的距離 <= 整份文件上方捲出的距離
+            if ($(obj).position().top <= $(document).scrollTop()) {
+              secNo = i-1; //也就代表應該在第幾個區段
+            }
+          }
+        );
+        //改變按鈕對應呈現的位置
+        $('nav a').removeClass('active');
+        $('nav a').eq(secNo).addClass('active');
+        console.log(secNo);
+      }
+    });
+    //#sec3當滑鼠滑入.col-12, 自己要放大, 其餘要縮小
+    $('#sec6 .col-12').hover(
+            function () {
+                $('#sec6 .col-12').addClass('scaleS');
+                $(this).removeClass('scaleS').addClass('scaleB');
+                // $(this).addClass('scaleB');
+                // $(this).siblings().addClass('scaleS');
+            },
+            function () {
+                $('#sec6 .col-12').removeClass('scaleB').removeClass('scaleS');
+            }
+      );
+
+
+
+</script>
+<link rel="stylesheet"href="https://unpkg.com/aos@next/dist/aos.css"/> 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
+  <script>
+   AOS.init(); 
+   </script>
+    <script>
+      // 導覽列  ===========================================================
+      $('.navmenu').click(function(){
+            $('.navmenu_show').slideToggle();
+          });
+     
+    </script>
 </body>
+
 </html>
